@@ -5,10 +5,10 @@ In this last section, we'll consolidate all you have learnt this week, with some
     * Accept details using prompts
     * Use an object to store user details
     * Validate user details
-    * Username must be less than ten
-    * Password must be greater than six
-    * User must confirms password
-    * If username and password do not match, alert the user
+      * Username must be less than ten
+      * Password must be greater than six
+      * User must confirm password
+      * If username and password do not match, alert the user
     * Display user details
 
 */
