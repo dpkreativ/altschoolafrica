@@ -12,3 +12,20 @@ In this last section, we'll consolidate all you have learnt this week, with some
     * Display user details
 
 */
+function getUsername() {
+  let username = prompt('Enter your username:');
+
+  if (username.length > 10) {
+    username = prompt(
+      'Please ensure your username has less than 10 characters:'
+    );
+  }
+  return username;
+}
+
+const users = {};
+users[`${getUsername()}`] = {
+  username: getUsername(),
+};
+
+console.log(users);
