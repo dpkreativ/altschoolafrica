@@ -13,25 +13,59 @@ In this last section, we'll consolidate all you have learnt this week, with some
 
 */
 
-function getUsername() {
-  let x = prompt('Enter your username:');
+// Object for storing user details
+const user = {
+    username: '',
+    password: '',
+  },
+  cancelledMessage = 'You cancelled this process';
 
-  if (x === '') {
-    alert('Invalid username. Please try again');
-    getUsername();
-  } else if (x.length > 10) {
-    alert('Must be less than 10. Please try again');
-    getUsername();
+// Get username
+let username = prompt('Input username');
+
+if (username === null) {
+  alert(cancelledMessage);
+} else {
+  // Validate username
+  while (username === '' || username.length > 10) {
+    if (username === '') {
+      username = prompt('Invalid username. Try again');
+    } else {
+      username = prompt('Too long. Shorten it');
+    }
   }
 
-  return x;
+  // Store username in user object
+  user.username = username;
+
+  // Get user password
+  let password = prompt('Input password');
+
+  if (password === null) {
+    alert(cancelledMessage);
+  } else {
+    // Validate user password
+    while (password.length < 6 || password.length > 15) {
+      password = prompt('Password length must be between 6 - 15 characters');
+    }
+
+    // Confirm user password
+    let confirmPassword = prompt('Confirm password');
+
+    if (confirmPassword === null) {
+      alert(cancelledMessage);
+    } else {
+      while (confirmPassword !== password) {
+        confirmPassword = prompt(
+          'Passwords do not match. Pls put the correct password'
+        );
+      }
+
+      // Store confirmed password in user object
+      user.password = password;
+    }
+  }
 }
 
-const user = getUsername();
-
-let users = {};
-users[`${user}`] = {
-  username: user,
-};
-
-console.log(users);
+// Print user details to console
+console.log(user);
