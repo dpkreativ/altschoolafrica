@@ -13,59 +13,74 @@ In this last section, we'll consolidate all you have learnt this week, with some
 
 */
 
-// Object for storing user details
-const user = {
-    username: '',
-    password: '',
-  },
-  cancelledMessage = 'You cancelled this process';
+// // Object for storing user details
+// const user = {
+//     username: '',
+//     password: '',
+//   },
+//   cancelledMessage = 'You cancelled this process';
 
-// Get username
+// // Get username
+// let username = prompt('Input username');
+
+// if (username === null) {
+//   alert(cancelledMessage);
+// } else {
+//   // Validate username
+//   while (username === '' || username.length > 10) {
+//     if (username === '') {
+//       username = prompt('Invalid username. Try again');
+//     } else {
+//       username = prompt('Too long. Shorten it');
+//     }
+//   }
+
+//   // Store username in user object
+//   user.username = username;
+
+//   // Get user password
+//   let password = prompt('Input password');
+
+//   if (password === null) {
+//     alert(cancelledMessage);
+//   } else {
+//     // Validate user password
+//     while (password.length < 6 || password.length > 15) {
+//       password = prompt('Password length must be between 6 - 15 characters');
+//     }
+
+//     // Confirm user password
+//     let confirmPassword = prompt('Confirm password');
+
+//     if (confirmPassword === null) {
+//       alert(cancelledMessage);
+//     } else {
+//       while (confirmPassword !== password) {
+//         confirmPassword = prompt(
+//           'Passwords do not match. Pls put the correct password'
+//         );
+//       }
+
+//       // Store confirmed password in user object
+//       user.password = password;
+//     }
+//   }
+// }
+
+// // Print user details to console
+// console.log(user);
+
+const user = {};
+
 let username = prompt('Input username');
 
-if (username === null) {
-  alert(cancelledMessage);
-} else {
-  // Validate username
-  while (username === '' || username.length > 10) {
-    if (username === '') {
-      username = prompt('Invalid username. Try again');
-    } else {
-      username = prompt('Too long. Shorten it');
-    }
-  }
-
-  // Store username in user object
-  user.username = username;
-
-  // Get user password
-  let password = prompt('Input password');
-
-  if (password === null) {
-    alert(cancelledMessage);
-  } else {
-    // Validate user password
-    while (password.length < 6 || password.length > 15) {
-      password = prompt('Password length must be between 6 - 15 characters');
-    }
-
-    // Confirm user password
-    let confirmPassword = prompt('Confirm password');
-
-    if (confirmPassword === null) {
-      alert(cancelledMessage);
-    } else {
-      while (confirmPassword !== password) {
-        confirmPassword = prompt(
-          'Passwords do not match. Pls put the correct password'
-        );
-      }
-
-      // Store confirmed password in user object
-      user.password = password;
-    }
-  }
+while (!validateUsername(username)) {
+  username.length > 10
+    ? (username = prompt('Too long. Make your username shorter'))
+    : (username = prompt('Invalid. Please pick a username'));
 }
 
-// Print user details to console
-console.log(user);
+function validateUsername(x) {
+  if (username === null) alert('You have ended this session');
+  return x !== '' && x.length < 10;
+}
