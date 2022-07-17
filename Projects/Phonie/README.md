@@ -1,5 +1,7 @@
 # Phonie
 
+_Identify the telecoms carrier from a phone number_
+
 ## Scenario
 
 A user is filling a form in your web application and they are required to enter their phone number into a form field.
