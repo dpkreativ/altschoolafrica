@@ -15,6 +15,8 @@ When the user opens your dashboard app, they see HTML tables showing the followi
 - How many students are male, female or other genders/orientation
 - Minimum, maximum, and average age of students in the school
 
+<hr />
+
 ## Advanced features
 
 _(OPTIONAL- build any, some or all if you feel up to it)_

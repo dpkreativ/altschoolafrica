@@ -10,6 +10,8 @@ Your app is to help people safely share content on social media by scrambling po
 
 After clicking a “Redact Now” button, the app scans through the original text and replaces the specified words to be scrambled with asterisks (i.e \*\*\*)
 
+<hr />
+
 ## Advanced features
 
 _(OPTIONAL- build any, some or all if you feel up to it)_
