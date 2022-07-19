@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-.header {
+.header,
+.footer {
   margin: 40px 0;
   text-align: center;
 }
