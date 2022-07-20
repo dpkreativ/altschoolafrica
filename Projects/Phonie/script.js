@@ -1,3 +1,6 @@
+document.getElementById('phoneNumber').addEventListener('input', handleChange);
+
+// ==== FUNCTIONS ==== //
 function handleChange() {
   const inputBox = document.getElementById('inputBox');
   const inputValue = document.getElementById('phoneNumber').value.split('');
@@ -26,7 +29,6 @@ function handleChange() {
   }
 }
 
-// FUNCTIONS
 function addNetwork(ntwkId, inputId, ntwk) {
   ntwkId.innerHTML = `<img src="images/${ntwk}.jpg" alt="${ntwk}" class="image" />`;
   ntwkId.classList.replace('gray', `${ntwk}`);
